@@ -103,7 +103,7 @@ Meteor.methods({
     MessagesMeta.insert({totalcount: true, count: 0});
   },
 
-  addMessage: function (message, name, player_id) {
+  addMessage: function (name, message, player_id) {
     // TODO: Trusting client to give proper player_id, probably not the best idea ;)
     
     // Force messages reset after so many messages
