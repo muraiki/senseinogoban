@@ -701,6 +701,12 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
 
+----------
+raphael.js: https://github.com/DmitryBaranovskiy/raphael/
+----------
+Copyright © 2008-2012 Dmitry Baranovskiy (http://raphaeljs.com)
+Copyright © 2008-2012 Sencha Labs (http://sencha.com) 
+
 =========================
 Apache Licensed Libraries
 =========================
@@ -915,5 +921,4 @@ The following libraries are licensed under the Apache License, Version 2.0:
 ----------
 Bootstrap: https://github.com/twitter/bootstrap
 ----------
-
 Copyright © 2012 Twitter, Inc.
