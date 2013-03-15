@@ -1,0 +1,51 @@
+<head>
+  <title>Sensei no Goban - 先生の碁盤</title>
+</head>
+
+<body>
+	<div class="container">
+		<h1>Sensei no Goban <small>先生の碁盤</small></h1>
+		<p>Sensei no Goban shows all of your movements; you don't have to drop the stone. It does not force you to use the rules of Go, so it is ideal for teaching games.</p>
+
+		<p>Click on a stone bowl to draw a new stone. Drag and drop the stone onto the board. Others can see as you move it around.</p>
+
+		<p>To chat, type your name and message on the left, then press enter.</p>
+
+		<hr />
+
+		<div class="row">
+
+	  	<div class="span3">
+	  		{{> chatinput}}
+			  <div class="chat">
+			  	{{> chat}}
+			  </div>
+			</div>
+
+	  	<div class="span9">
+	  		{{> board}}
+			  {{> options}}
+	  	</div>
+	</div>
+</body>
+
+<template name="board">
+  <div id="paper"></div>
+</template>
+
+<template name="chatinput">
+	<input type="text" id="name" placeholder="Name" /><br />
+	<input type="text" id="message" placeholder="Your Message" />
+	<hr />
+</template>
+
+<template name="chat">
+	{{#each messages}}
+		<p><em>{{name}}</em><br />{{message}}</p>
+	{{/each}}
+</template>
+
+<template name="options">
+	<input type="button" class="resetGoban" value="Reset board">
+	<input type="button" class="resetMessages" value="Reset messages">
+</template>
