@@ -42,30 +42,30 @@ function setupGoban () {
 
 function setupBowls () {
 
-  var createGoBowl = function (x, y, holecolor) {
+  var whiteBowlX = 532,
+      whiteBowlY = 20,
+      blackBowlX = 532,
+      blackBowlY = 270;
+
+  var createGoBowl = function (x, y, piececolor, holecolor) {
+
     var bowl = paper.ellipse(x, y + 8, 28, 20)
-                    .attr({stroke: 'none',
-                           fill: 'brown'});
-    var hole = paper.ellipse(x, y, 20, 10)
-                    .attr({stroke: 'none',
-                           fill: holecolor});
-    return paper.set().push(bowl, hole);
+                    .attr({ stroke: 'none',
+                            fill: 'brown' }),
+
+        hole = paper.ellipse(x, y, 20, 10)
+                    .attr({ stroke: 'none',
+                            fill: holecolor });
+
+    return paper.set().push(bowl, hole)
+                      .click(function () {
+                        Meteor.call('addPiece', piececolor, x, y, Session.get('player_id'));
+                      });
   };
 
-  var whiteBowlX = 532;
-  var whiteBowlY = 20;
-  var blackBowlX = 532;
-  var blackBowlY = 270;
+  whiteBowl = createGoBowl(whiteBowlX, whiteBowlY, 'white', 'white');
+  blackBowl = createGoBowl(blackBowlX, blackBowlY, 'black', 'gray');
 
-  whiteBowl = createGoBowl(whiteBowlX, whiteBowlY, 'white');
-  blackBowl = createGoBowl(blackBowlX, blackBowlY, 'gray');
-
-  whiteBowl.click(function () {
-    Meteor.call('addPiece','white', whiteBowlX, whiteBowlY, Session.get('player_id'));
-  });
-  blackBowl.click(function () {
-    Meteor.call('addPiece','black', blackBowlX, blackBowlY, Session.get('player_id'));
-  });
 }
 
 
